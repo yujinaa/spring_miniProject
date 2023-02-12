@@ -10,16 +10,16 @@
 <title>Insert title here</title>
 </head>
 <body>
-여섯 번째 문제 페이지
-<div>
-	질문 
-</div>
-<div>
-	<input type="button" value="전혀 아니다"><br>
-	<input type="button" value="약간 아니다"><br>
-	<input type="button" value="보통이다"><br>
-	<input type="button" value="약간 그렇다"><br>
-	<input type="button" value="매우 그렇다"><br>
-</div>
+<form action="${contextPath }/test/sixPage" method="post">
+ 	<div id="sixth-page">
+        <h1>문제</h1>
+        <h2>문제 설명</h2>
+		<input type="button" value="전혀 아니다"><br>
+		<input type="button" value="약간 아니다"><br>
+		<input type="button" value="보통이다"><br>
+		<input type="button" value="약간 그렇다"><br>
+		<input type="button" value="매우 그렇다"><br>
+    </div>
+</form>
 </body>
 </html>
