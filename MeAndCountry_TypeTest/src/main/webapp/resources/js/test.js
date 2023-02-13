@@ -47,6 +47,14 @@
 const start = document.querySelector("#start-page")
 const main = document.querySelector("#main-page");
 function begin(){
-	start.style.display ="none";
-	main.style.display= "block";
+	start.style.webkitAnimation = "fadeOut 1s";
+	start.style.animation = "fadeOut 1s";
+	setTimeout(() => {
+		main.style.webkitAnimation = "fadeIn 1s";
+		main.style.animation = "fadeIn 1s";
+		setTimeout(() => {
+			start.style.display ="none";
+			main.style.display = "block";
+	},450)
+},450);	
 }
