@@ -46,6 +46,11 @@
 
 const start = document.querySelector("#start-page")
 const main = document.querySelector("#main-page");
+function next(){
+	var q= document.querySelector('.pageBox');
+	q
+}
+
 function begin(){
 	start.style.webkitAnimation = "fadeOut 1s";
 	start.style.animation = "fadeOut 1s";
@@ -56,5 +61,6 @@ function begin(){
 			start.style.display ="none";
 			main.style.display = "block";
 	},450)
+	next();
 },450);	
 }

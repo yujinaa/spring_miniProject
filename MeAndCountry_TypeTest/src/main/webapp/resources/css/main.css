@@ -2,6 +2,24 @@
 	display: none;
 	text-align: center;
 }
+.q-num{
+	font-size: 50px;
+}
+.progress-txt{
+	font-size: 30px;
+}
+.q1{
+	font-size: 30px;
+}
+.q1-btn{
+	margin-top:10px;
+	height: 60px;
+	width: 400px;
+	font-size: 25px;
+	background-color: black;
+	color: #F0F8FF;
+	border: none;
+}
 
 #result-page {
 	display: none;
