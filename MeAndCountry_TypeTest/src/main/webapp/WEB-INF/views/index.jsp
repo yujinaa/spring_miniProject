@@ -8,6 +8,7 @@
 <head>
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <link rel="stylesheet" href="resources/css/index.css">
+<link rel="stylesheet" href="resources/css/main.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
@@ -28,7 +29,7 @@
 		</div>
 		<div class="start-btn">
 		지금까지 총 ~~명이 참여했어요!<br> 
-		<a href="${contextPath }/test/q1"><button type="button" id = "startBtn">시작하기</button></a>
+		<button type="button" id = "startBtn" onclick="js:begin()">시작하기</button>
 		</div>
 	</section>
 
