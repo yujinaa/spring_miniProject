@@ -46,8 +46,9 @@
 
 const start = document.querySelector("#start-page")
 const main = document.querySelector("#main-page");
-
+const nextQ = document.querySelector("#main-page2");
 function begin(){
+	
 	start.style.webkitAnimation = "fadeOut 1s";
 	start.style.animation = "fadeOut 1s";
 	setTimeout(() => {
@@ -61,5 +62,16 @@ function begin(){
 }
 
 $('.q1-btn').on('click',function() {
-	
+	main.style.display ="none";
+	nextQ.style.display ="block";
+	main.style.webkitAnimation = "fadeOut 1s";
+	nextQ.style.animation = "fadeOut 1s";
+	setTimeout(() => {
+		nextQ.style.webkitAnimation = "fadeIn 1s";
+		nextQ.style.animation = "fadeIn 1s";
+		setTimeout(() => {
+			main.style.display ="none";
+			nextQ.style.display = "block";
+	},450)
+},450);	
 })

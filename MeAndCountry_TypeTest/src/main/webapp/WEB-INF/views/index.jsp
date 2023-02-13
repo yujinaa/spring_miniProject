@@ -37,19 +37,22 @@
 		</section>
 
 		<!-- 문제 페이지 -->
-		<section id="main-page">
-			<div class="pageBox">
-				<form action="${contextPath }/test/firstPage" name="page1"
-					method="get">
+		<form action="${contextPath }/test/firstPage" name="page1"
+			method="get">
+			<section id="main-page">
+				<div class="pageBox">
+
 					<div>
 						<!--몇번째 문항인지 숫자로 표현-->
 						<h1 class="q-num">Q1</h1>
 						<p class="progress-txt">1/6</p>
 					</div>
 					<div>
-					 <p class="q1">조직이나 단체에서 불평등한 상황이 생길 경우<br> 권리를 요구하기보다는 수용한다.</p>
+						<p class="q1">
+							조직이나 단체에서 불평등한 상황이 생길 경우<br> 권리를 요구하기보다는 수용한다.
+						</p>
 					</div>
-	
+
 					<div>
 						<button type="button" value="0" class="q1-btn">전혀 아니다</button>
 						<br>
@@ -62,9 +65,38 @@
 						<button type="button" value="4" class="q1-btn">매우 그렇다</button>
 						<br>
 					</div>
-				</form>
-			</div>
-		</section>
+				</div>
+			</section>
+		</form>
+		<section id="main-page2">
+				<div class="pageBox">
+
+					<div>
+						<!--몇번째 문항인지 숫자로 표현-->
+						<h1 class="q-num">Q2</h1>
+						<p class="progress-txt">2/6</p>
+					</div>
+					<div>
+						<p class="q1">
+							조직이나 단체에서 불평등한 상황이 생길 경우<br> 권리를 요구하기보다는 수용한다.
+						</p>
+					</div>
+
+					<div>
+						<button type="button" value="0" class="q1-btn">전혀 아니다</button>
+						<br>
+						<button type="button" value="1" class="q1-btn">약간 아니다</button>
+						<br>
+						<button type="button" value="2" class="q1-btn">보통이다</button>
+						<br>
+						<button type="button" value="3" class="q1-btn">약간 그렇다</button>
+						<br>
+						<button type="button" value="4" class="q1-btn">매우 그렇다</button>
+						<br>
+					</div>
+				</div>
+			</section>
+		</form>
 
 		<!-- 결과 페이지 -->
 		<section id="result-page">

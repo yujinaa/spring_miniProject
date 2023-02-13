@@ -32,6 +32,10 @@
 	transition:background 0.3s ease-in-out;
 	
 }
+#main-page2{
+	display: none;
+	text-align: center;
+}
 
 #result-page {
 	display: none;
