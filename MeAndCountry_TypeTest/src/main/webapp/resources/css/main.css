@@ -20,6 +20,18 @@
 	color: #F0F8FF;
 	border: none;
 }
+.q1-btn:hover{
+	margin-top:10px;
+	height: 60px;
+	width: 400px;
+	font-size: 25px;
+	background-color: #A9A9A9;
+	color: black;
+	border: none;
+	cursor:pointer;
+	transition:background 0.3s ease-in-out;
+	
+}
 
 #result-page {
 	display: none;
