@@ -41,7 +41,7 @@
 		</section>
 
 		<!-- 문제 페이지 -->
-		<form action="${contextPath }/test/firstPage" name="page1"
+		<form action="${contextPath }/test/firstPage" 
 			method="get">
 			<section id="main-page">
 				<div class="pageBox">
@@ -57,15 +57,15 @@
 					</div>
 
 					<div>
-						<button type="button" value="0" class="q1-btn">전혀 아니다</button>
+						<button type="button" value="0" name="answerOne" class="q1-btn">전혀 아니다</button>
 						<br>
-						<button type="button" value="1" class="q1-btn">약간 아니다</button>
+						<button type="button" value="1"  name="answerOne" class="q1-btn">약간 아니다</button>
 						<br>
-						<button type="button" value="2" class="q1-btn">보통이다</button>
+						<button type="button" value="2"  name="answerOne" class="q1-btn">보통이다</button>
 						<br>
-						<button type="button" value="3" class="q1-btn">약간 그렇다</button>
+						<button type="button" value="3"  name="answerOne" class="q1-btn">약간 그렇다</button>
 						<br>
-						<button type="button" value="4" class="q1-btn">매우 그렇다</button>
+						<button type="button" value="4"  name="answerOne" class="q1-btn">매우 그렇다</button>
 						<br>
 					</div>
 				</div>
@@ -105,7 +105,9 @@
 						<p class="progress-txt">3/6</p>
 					</div>
 					<div>
-						<p class="q1">소통, 화합보다 경쟁, 성취, 승리가 <br>더 중요하다고 생각한다.</p>
+						<p class="q1">
+							소통, 화합보다 경쟁, 성취, 승리가 <br>더 중요하다고 생각한다.
+						</p>
 					</div>
 
 					<div>
@@ -197,6 +199,9 @@
 						<br>
 						<button type="button" value="4" class="q6-btn">매우 그렇다</button>
 						<br>
+						<div class="result">
+							<input type="submit" value="결과보기" >
+						</div>
 					</div>
 				</div>
 			</section>
