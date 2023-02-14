@@ -2,6 +2,14 @@
 	display: none;
 	text-align: center;
 }
+.pageBox{
+	margin: 0 auto;
+	text-align: center;
+	border :2px solid black;
+	width: 600px;
+	height: 720px;
+}
+
 .q-num{
 	font-size: 50px;
 }

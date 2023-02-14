@@ -41,10 +41,10 @@
 		</section>
 
 		<!-- 문제 페이지 -->
-		<form action="${contextPath }/test/firstPage" name="page1"	method="get">
+		<form action="${contextPath }/test/firstPage" name="page1"
+			method="get">
 			<section id="main-page">
 				<div class="pageBox">
-
 					<div>
 						<!--몇번째 문항인지 숫자로 표현 1번-->
 						<h1 class="q-num">Q1</h1>
@@ -70,7 +70,7 @@
 					</div>
 				</div>
 			</section>
-		<section id="main-page2">
+			<section id="main-page2">
 				<div class="pageBox">
 
 					<div>
@@ -79,9 +79,7 @@
 						<p class="progress-txt">2/6</p>
 					</div>
 					<div>
-						<p class="q1">
-							전체의 성과보다 개인의 성과가 더 중요하다. 
-						</p>
+						<p class="q1">전체의 성과보다 개인의 성과가 더 중요하다.</p>
 					</div>
 
 					<div>
@@ -107,9 +105,7 @@
 						<p class="progress-txt">3/6</p>
 					</div>
 					<div>
-						<p class="q1">
-							소통, 화합보다는 경쟁, 성취, 승리가 중요하다고 생각한다.
-						</p>
+						<p class="q1">소통, 화합보다 경쟁, 성취, 승리가 <br>더 중요하다고 생각한다.</p>
 					</div>
 
 					<div>
@@ -136,7 +132,7 @@
 					</div>
 					<div>
 						<p class="q1">
-							미래에 대한 불확실하고 모호한 상황보다 예측 가능성과 안정성을 추구한다.
+							미래에 대한 불확실하고 모호한 상황보다 <br>예측 가능성과 안정성을 추구한다.
 						</p>
 					</div>
 
@@ -163,9 +159,7 @@
 						<p class="progress-txt">5/6</p>
 					</div>
 					<div>
-						<p class="q1">
-							단기적인 이익보다는 장기적인 관점에서의 이익을 추구한다.
-						</p>
+						<p class="q1">단기적인 이익보다는 장기적인 관점에서의 이익을 추구한다.</p>
 					</div>
 
 					<div>
@@ -190,9 +184,7 @@
 						<p class="progress-txt">6/6</p>
 					</div>
 					<div>
-						<p class="q1">
-							여가 생활이나 취미 활동에 대한  욕구가 높다.
-						</p>
+						<p class="q1">여가 생활이나 취미 활동에 대한 욕구가 높다.</p>
 					</div>
 					<div>
 						<button type="button" value="0" class="q6-btn">전혀 아니다</button>
