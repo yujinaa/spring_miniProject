@@ -52,6 +52,12 @@ const nextQ4 = document.querySelector("#main-page4");//4
 const nextQ5 = document.querySelector("#main-page5");//5
 const nextQ6 = document.querySelector("#main-page6");//6
 
+	
+	//const two = document.getElementById("little");
+	//const thr = document.getElementById("normal");
+	//const fou = document.getElementById("some");
+	//const fiv = document.getElementById("very");
+	
 //시작하기 버튼 클릭시 1번 문제 출력
 function begin(){	
 	start.style.webkitAnimation = "fadeOut 1s";
@@ -65,11 +71,13 @@ function begin(){
 	},450)
 },450);	
 }
-
 //1번 버튼 클릭시 2번 출력
 $('.q1-btn').on('click',function() {
 	main.style.webkitAnimation = "fadeOut 1s";
 	main.style.animation = "fadeOut 1s";
+	//if(one.value !=null || two.value !=null || thr.value !=null || fou.value !=null || fiv.value !=null){
+		//btnOne.value;
+		console.log(this.value);
 	setTimeout(() => {
 		nextQ.style.webkitAnimation = "fadeIn 1s";
 		nextQ.style.animation = "fadeIn 1s";
@@ -79,6 +87,7 @@ $('.q1-btn').on('click',function() {
 	},450)
 },450);	
 })
+
 //2번 버튼 클릭시 3번 출력
 $('.q2-btn').on('click',function() {
 	nextQ.style.webkitAnimation = "fadeOut 1s";
@@ -131,3 +140,7 @@ $('.q5-btn').on('click',function() {
 	},450)
 },450);	
 })
+const answer = document.getElementById("answer");
+function result(){
+	answer.value; 
+}

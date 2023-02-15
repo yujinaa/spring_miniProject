@@ -55,15 +55,15 @@
 					</div>
 
 					<div>
-						<button type="button" value="0" name="answerOne" class="q1-btn">전혀 아니다</button>
+						<button type="button" value="0" id="answer" name="answerOne" class="q1-btn">전혀 아니다</button>
 						<br>
-						<button type="button" value="1"  name="answerOne" class="q1-btn">약간 아니다</button>
+						<button type="button" value="1" id="answer" name="answerOne" class="q1-btn">약간 아니다</button>
 						<br>
-						<button type="button" value="2"  name="answerOne" class="q1-btn">보통이다</button>
+						<button type="button" value="2" id="answer" name="answerOne" class="q1-btn">보통이다</button>
 						<br>
-						<button type="button" value="3"  name="answerOne" class="q1-btn">약간 그렇다</button>
+						<button type="button" value="3" id="answer" name="answerOne" class="q1-btn">약간 그렇다</button>
 						<br>
-						<button type="button" value="4"  name="answerOne" class="q1-btn">매우 그렇다</button>
+						<button type="button" value="4" id="answer" name="answerOne" class="q1-btn">매우 그렇다</button>
 						<br>
 					</div>
 				</div>
@@ -109,15 +109,15 @@
 					</div>
 
 					<div>
-						<button type="button" value="0" name="answerThree" class="q3-btn">전혀 아니다</button>
+						<input type="button" value="젼혀 아니다" name="answerThree" class="q3-btn">
 						<br>
-						<button type="button" value="1" name="answerThree" class="q3-btn">약간 아니다</button>
+						<input type="button" value="약간 아니다" name="answerThree" class="q3-btn">
 						<br>
-						<button type="button" value="2" name="answerThree" class="q3-btn">보통이다</button>
+						<input type="button" value="보통이다" name="answerThree" class="q3-btn">
 						<br>
-						<button type="button" value="3" name="answerThree" class="q3-btn">약간 그렇다</button>
+						<input type="button" value="약간 그렇다" name="answerThree" class="q3-btn">
 						<br>
-						<button type="button" value="4" name="answerThree" class="q3-btn">매우 그렇다</button>
+						<input type="button" value="매우 그렇다" name="answerThree" class="q3-btn">
 						<br>
 					</div>
 				</div>
@@ -198,7 +198,7 @@
 						<button type="button" value="4" name="answersix" class="q6-btn">매우 그렇다</button>
 						<br>
 						<div class="result">
-							<input type="submit" value="결과보기" >
+							<input type="submit" value="결과보기" onclick="result()" >
 						</div>
 					</div>
 				</div>
