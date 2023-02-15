@@ -12,9 +12,7 @@
 <link rel="stylesheet" href="resources/css/animation.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
-	rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
 
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -42,7 +40,7 @@
 
 		<!-- 문제 페이지 -->
 		<form action="${contextPath }/test/firstPage" 
-			method="get">
+			method="post">
 			<section id="main-page">
 				<div class="pageBox">
 					<div>
@@ -83,15 +81,15 @@
 					</div>
 
 					<div>
-						<button type="button" value="0" class="q2-btn">전혀 아니다</button>
+						<button type="button" value="0" name="answerTwo" class="q2-btn">전혀 아니다</button>
 						<br>
-						<button type="button" value="1" class="q2-btn">약간 아니다</button>
+						<button type="button" value="1" name="answerTwo" class="q2-btn">약간 아니다</button>
 						<br>
-						<button type="button" value="2" class="q2-btn">보통이다</button>
+						<button type="button" value="2" name="answerTwo" class="q2-btn">보통이다</button>
 						<br>
-						<button type="button" value="3" class="q2-btn">약간 그렇다</button>
+						<button type="button" value="3" name="answerTwo" class="q2-btn">약간 그렇다</button>
 						<br>
-						<button type="button" value="4" class="q2-btn">매우 그렇다</button>
+						<button type="button" value="4" name="answerTwo" class="q2-btn">매우 그렇다</button>
 						<br>
 					</div>
 				</div>
@@ -111,15 +109,15 @@
 					</div>
 
 					<div>
-						<button type="button" value="0" class="q3-btn">전혀 아니다</button>
+						<button type="button" value="0" name="answerThree" class="q3-btn">전혀 아니다</button>
 						<br>
-						<button type="button" value="1" class="q3-btn">약간 아니다</button>
+						<button type="button" value="1" name="answerThree" class="q3-btn">약간 아니다</button>
 						<br>
-						<button type="button" value="2" class="q3-btn">보통이다</button>
+						<button type="button" value="2" name="answerThree" class="q3-btn">보통이다</button>
 						<br>
-						<button type="button" value="3" class="q3-btn">약간 그렇다</button>
+						<button type="button" value="3" name="answerThree" class="q3-btn">약간 그렇다</button>
 						<br>
-						<button type="button" value="4" class="q3-btn">매우 그렇다</button>
+						<button type="button" value="4" name="answerThree" class="q3-btn">매우 그렇다</button>
 						<br>
 					</div>
 				</div>
@@ -128,7 +126,7 @@
 				<div class="pageBox">
 
 					<div>
-						<!--몇번째 문항인지 숫자로 표현 3번-->
+						<!--몇번째 문항인지 숫자로 표현 4번-->
 						<h1 class="q-num">Q4</h1>
 						<p class="progress-txt">4/6</p>
 					</div>
@@ -139,15 +137,15 @@
 					</div>
 
 					<div>
-						<button type="button" value="0" class="q4-btn">전혀 아니다</button>
+						<button type="button" value="0" name="answerfour" class="q4-btn">전혀 아니다</button>
 						<br>
-						<button type="button" value="1" class="q4-btn">약간 아니다</button>
+						<button type="button" value="1" name="answerThree" class="q4-btn">약간 아니다</button>
 						<br>
-						<button type="button" value="2" class="q4-btn">보통이다</button>
+						<button type="button" value="2" name="answerThree" class="q4-btn">보통이다</button>
 						<br>
-						<button type="button" value="3" class="q4-btn">약간 그렇다</button>
+						<button type="button" value="3" name="answerThree" class="q4-btn">약간 그렇다</button>
 						<br>
-						<button type="button" value="4" class="q4-btn">매우 그렇다</button>
+						<button type="button" value="4" name="answerThree" class="q4-btn">매우 그렇다</button>
 						<br>
 					</div>
 				</div>
@@ -156,7 +154,7 @@
 				<div class="pageBox">
 
 					<div>
-						<!--몇번째 문항인지 숫자로 표현 3번-->
+						<!--몇번째 문항인지 숫자로 표현 5번-->
 						<h1 class="q-num">Q5</h1>
 						<p class="progress-txt">5/6</p>
 					</div>
@@ -165,15 +163,15 @@
 					</div>
 
 					<div>
-						<button type="button" value="0" class="q5-btn">전혀 아니다</button>
+						<button type="button" value="0" name="answerfive" class="q5-btn">전혀 아니다</button>
 						<br>
-						<button type="button" value="1" class="q5-btn">약간 아니다</button>
+						<button type="button" value="1" name="answerfive" class="q5-btn">약간 아니다</button>
 						<br>
-						<button type="button" value="2" class="q5-btn">보통이다</button>
+						<button type="button" value="2" name="answerfive" class="q5-btn">보통이다</button>
 						<br>
-						<button type="button" value="3" class="q5-btn">약간 그렇다</button>
+						<button type="button" value="3" name="answerfive" class="q5-btn">약간 그렇다</button>
 						<br>
-						<button type="button" value="4" class="q5-btn">매우 그렇다</button>
+						<button type="button" value="4" name="answerfive" class="q5-btn">매우 그렇다</button>
 						<br>
 					</div>
 				</div>
@@ -181,7 +179,7 @@
 			<section id="main-page6">
 				<div class="pageBox">
 					<div>
-						<!--몇번째 문항인지 숫자로 표현 3번-->
+						<!--몇번째 문항인지 숫자로 표현 6번-->
 						<h1 class="q-num">Q6</h1>
 						<p class="progress-txt">6/6</p>
 					</div>
@@ -189,15 +187,15 @@
 						<p class="q1">여가 생활이나 취미 활동에 대한 욕구가 높다.</p>
 					</div>
 					<div>
-						<button type="button" value="0" class="q6-btn">전혀 아니다</button>
+						<button type="button" value="0" name="answersix" class="q6-btn">전혀 아니다</button>
 						<br>
-						<button type="button" value="1" class="q6-btn">약간 아니다</button>
+						<button type="button" value="1" name="answersix" class="q6-btn">약간 아니다</button>
 						<br>
-						<button type="button" value="2" class="q6-btn">보통이다</button>
+						<button type="button" value="2" name="answersix" class="q6-btn">보통이다</button>
 						<br>
-						<button type="button" value="3" class="q6-btn">약간 그렇다</button>
+						<button type="button" value="3" name="answersix" class="q6-btn">약간 그렇다</button>
 						<br>
-						<button type="button" value="4" class="q6-btn">매우 그렇다</button>
+						<button type="button" value="4" name="answersix" class="q6-btn">매우 그렇다</button>
 						<br>
 						<div class="result">
 							<input type="submit" value="결과보기" >

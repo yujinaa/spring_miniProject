@@ -2,6 +2,26 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-<mapper namespace="com.country.type.test.mybatis.TestMapper">
-  
+<mapper namespace="com.country.type.mybatis.test.testMapper">
+	<resultMap type="com.country.type.test.dto.testDTO" id="test">
+		<id property="num" column="num" />
+		<result property="answerOne" column="ans_one" />
+		<result property="answerTwo" column="ans_two" />
+		<result property="answerThree" column="ans_three" />
+		<result property="answerFour" column="ans_four" />
+		<result property="answerFive" column="ans_five" />
+		<result property="answerSix" column="ans_six" />
+		<!-- 
+		<result property="country" column="country" />
+		 -->
+		<result property="count" column="count" />
+	</resultMap>
+	
+	<!--테스트하기-->
+	<insert id="selectAnswer">
+		insert into find_country(
+		num, ans_one, ans_two,ans_three,ans_four,ans_five,ans_six,count)
+		values(find_country_seq.nextval,#{answerOne},#{answerTwo}, #{answerThree},
+		#{answerFour},#{answerFive},#{answerSix},#{count})
+	</insert>
 </mapper>

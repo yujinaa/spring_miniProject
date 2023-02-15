@@ -1,8 +1,8 @@
-package com.country.type.test.service;
+package com.country.type.mybatis.test;
 
 import com.country.type.test.dto.testDTO;
 
-public interface testService {
+public interface testMapper {
 	public void selectAnswer(testDTO dto);
 
 }
