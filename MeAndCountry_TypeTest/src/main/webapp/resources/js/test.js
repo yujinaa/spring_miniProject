@@ -77,7 +77,7 @@ $('.q1-btn').on('click',function() {
 	main.style.animation = "fadeOut 1s";
 	//if(one.value !=null || two.value !=null || thr.value !=null || fou.value !=null || fiv.value !=null){
 		//btnOne.value;
-		console.log(this.value);
+	console.log(this.value);
 	setTimeout(() => {
 		nextQ.style.webkitAnimation = "fadeIn 1s";
 		nextQ.style.animation = "fadeIn 1s";
@@ -93,6 +93,7 @@ $('.q2-btn').on('click',function() {
 	nextQ.style.webkitAnimation = "fadeOut 1s";
 	nextQ.style.animation = "fadeOut 1s";
 	setTimeout(() => {
+		console.log(this.value);
 		nextQ3.style.webkitAnimation = "fadeIn 1s";
 		nextQ3.style.animation = "fadeIn 1s";
 		setTimeout(() => {

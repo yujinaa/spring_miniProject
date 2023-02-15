@@ -55,15 +55,15 @@
 					</div>
 
 					<div>
-						<button type="button" value="0" id="answer" name="answerOne" class="q1-btn">전혀 아니다</button>
+						<input type="button" value="전혀 아니다" id="answer" name="answerOne" class="q1-btn">
 						<br>
-						<button type="button" value="1" id="answer" name="answerOne" class="q1-btn">약간 아니다</button>
+						<input type="button" value="약간 아니다" id="answer" name="answerOne" class="q1-btn">
 						<br>
-						<button type="button" value="2" id="answer" name="answerOne" class="q1-btn">보통이다</button>
+						<input type="button" value="보통이다" id="answer" name="answerOne" class="q1-btn">
 						<br>
-						<button type="button" value="3" id="answer" name="answerOne" class="q1-btn">약간 그렇다</button>
+						<input type="button" value="약간 그렇다" id="answer" name="answerOne" class="q1-btn">
 						<br>
-						<button type="button" value="4" id="answer" name="answerOne" class="q1-btn">매우 그렇다</button>
+						<input type="button" value="매우 그렇다" id="answer" name="answerOne" class="q1-btn">
 						<br>
 					</div>
 				</div>
