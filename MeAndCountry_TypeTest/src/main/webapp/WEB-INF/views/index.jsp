@@ -55,6 +55,16 @@
 					</div>
 
 					<div>
+						<button type="button" id="answer" value="0" name="answerOne" class="q1-btn">전혀 아니다</button>
+						<br>
+						<button type="button" id="answer" value="1" name="answerOne" class="q1-btn">약간 아니다</button>
+						<br>
+						<button type="button" id="answer" value="2" name="answerOne" class="q1-btn">보통이다</button>
+						<br>
+						<button type="button" id="answer" value="3" name="answerOne" class="q1-btn">약간 그렇다</button>
+						<br>
+						<button type="button" id="answer" value="4" name="answerOne" class="q1-btn">매우 그렇다</button>
+						<!-- 
 						<input type="button" value="전혀 아니다" id="answer" name="answerOne" class="q1-btn">
 						<br>
 						<input type="button" value="약간 아니다" id="answer" name="answerOne" class="q1-btn">
@@ -64,6 +74,7 @@
 						<input type="button" value="약간 그렇다" id="answer" name="answerOne" class="q1-btn">
 						<br>
 						<input type="button" value="매우 그렇다" id="answer" name="answerOne" class="q1-btn">
+						 -->
 						<br>
 					</div>
 				</div>
