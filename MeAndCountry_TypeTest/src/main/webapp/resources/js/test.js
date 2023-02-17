@@ -1,7 +1,8 @@
 
 const list=[
-	{
-		q : '조직이나 단체에서 불평등한 상황이 생길 경우 권리를 요구하기보다는 수용한다.',
+	{	
+		n : 'Q1',
+		q : '조직이나 단체에서 불평등한 상황이 생길 경우 <br>권리를 요구하기보다는 수용한다.',
 		a : [
 			{answer:'전혀 아니다' , type:[]},
 			{answer: '약간 아니다',type:['캐나다','뉴질랜드','스위스','독일','영국','미국','오스트레일리아']},
@@ -11,6 +12,7 @@ const list=[
 			]
 	},
 	{
+		n : 'Q2',
 		q: '전체의 성과보다 개인의 성과가 더 중요하다.',
 		a : [
 			{answer:'전혀 아니다' , type:['한국','태국','중국']},
@@ -21,7 +23,8 @@ const list=[
 			]
 	},
 	{
-		q: '소통, 화합보다 경쟁, 성취, 승리가 더 중요하다고 생각한다.',
+		n : 'Q3',
+		q: '소통, 화합보다 <br>경쟁, 성취, 승리가 더 중요하다고 생각한다.',
 		a : [
 			{answer:'전혀 아니다' , type:[]},
 			{answer: '약간 아니다',type:['한국','태국']},
@@ -31,7 +34,8 @@ const list=[
 			]
 	},
 	{
-		q: '미래에 대한 불확실하고 모호한 상황보다 예측 가능성과 안정성을 추구한다.',
+		n : 'Q4',
+		q: '미래에 대한 불확실하고 모호한 상황보다<br> 예측 가능성과 안정성을 추구한다.',
 		a : [
 			{answer:'전혀 아니다' , type:[]},
 			{answer: '약간 아니다',type:['영국','중국','인도']},
@@ -41,7 +45,8 @@ const list=[
 			]
 	},
 	{
-		q: '단기적인 이익보다는 장기적인 관점에서의 이익을 추구한다.',
+		n : 'Q5',
+		q: '단기적인 이익보다는 <br>장기적인 관점에서의 이익을 추구한다.',
 		a : [
 			{answer:'전혀 아니다' , type:['아르헨티나']},
 			{answer: '약간 아니다',type:['캐나다','뉴질랜드','미국','오스트레일리아','태국','멕시코']},
@@ -51,6 +56,7 @@ const list=[
 			]
 	},	
 	{
+		n : 'Q6',
 		q: '여가 생활이나 취미 활동에 대한 욕구가 높다.',
 		a : [
 			{answer:'전혀 아니다' , type:['이집트']},
@@ -73,7 +79,7 @@ const list=[
 
 const start = document.querySelector("#start-page")
 const main = document.querySelector("#main-page"); 
-
+const endPoint = 6; //총 6문제라 끝값은 6
 const result = document.querySelector("#result");
 const select = [];
 
@@ -96,12 +102,17 @@ function qAnswer(answerText, qIndex){
 	
 function next(qIndex){
 	var q = document.querySelector('.question-box');
+	var n = document.querySelector('.q-num');
+	var p = document.querySelector('.progress-txt');
 	q.innerHTML = list[qIndex].q; //list 첫 번째 요소에 q를 넣는다.
+	n.innerHTML = list[qIndex].n;
 	for(let i in list[qIndex].a){
 		qAnswer(list[qIndex].a[i].answer,qIndex);
 	}
+	var progress = document.querySelector('.progress-bar');
+	progress.style.width = (100/endPoint) * (qIndex+1) +'%';
 }
-//시작하기 버튼 클릭시 1번 문제 출력
+//시작하기 버튼 클릭시 문제 출력
 function begin(){	
 	start.style.webkitAnimation = "fadeOut 0.4s";
 	start.style.animation = "fadeOut 0.4s";

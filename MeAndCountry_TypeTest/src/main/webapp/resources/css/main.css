@@ -13,14 +13,23 @@
 .q-num{
 	font-size: 50px;
 }
-.progress-txt{
-	font-size: 30px;
+.progress{
+	margin: 0 auto;
+	height: 8px;
+	width: 400px;
+	background-color: white;
 }
+.progress-bar{
+	height: 100%;
+	background-color: black;
+}
+
 .question-box{
 	font-size: 30px;
+	margin: 20px;
 }
 .answer-box button{
-	margin-top:10px;
+	margin-top:15px;
 	height: 60px;
 	width: 400px;
 	font-size: 25px;
@@ -29,7 +38,7 @@
 	border: none;
 }
 .answer-box button:hover{
-	margin-top:10px;
+	margin-top:15px;
 	height: 60px;
 	width: 400px;
 	font-size: 25px;
@@ -39,7 +48,11 @@
 	cursor:pointer;
 	transition:background 0.3s ease-in-out;
 }
-
+/*
+.answerList{
+	display: block;
+}
+*/
 #result-page {
 	display: none;
 }

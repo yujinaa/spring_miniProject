@@ -46,8 +46,8 @@
 				<div class="pageBox">
 					<div>
 						<!--몇번째 문항인지 숫자로 표현 1번-->
-						<h1 class="q-num">Q1</h1>
-						<p class="progress-txt">1/6</p>
+						<h1 class="q-num"></h1>
+						<div class="progress"><p class="progress-bar"></p></div>
 					</div>
 					<div class="question-box"></div>
 
