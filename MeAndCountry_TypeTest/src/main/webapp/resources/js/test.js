@@ -51,6 +51,10 @@ const nextQ3 = document.querySelector("#main-page3");//3
 const nextQ4 = document.querySelector("#main-page4");//4
 const nextQ5 = document.querySelector("#main-page5");//5
 const nextQ6 = document.querySelector("#main-page6");//6
+const result = document.querySelector("#result");
+const select = [];
+
+ 
 
 	
 	//const two = document.getElementById("little");
@@ -69,6 +73,7 @@ function begin(){
 			start.style.display ="none";
 			main.style.display = "block";
 	},450)
+	next();
 },450);	
 }
 //1번 버튼 클릭시 2번 출력
@@ -141,9 +146,25 @@ $('.q5-btn').on('click',function() {
 	},450)
 },450);	
 })
-function result(){
-	
+function next(){
+	//var q = document.querySelector('.qBox');
+	//q.innerHTML = list[0].q; //list 첫 번째 요소에 q를 넣는다.
 }
+/*
+function result(){
+	nextQ6.style.webkitAnimation = "fadeOut 1s";
+	nextQ6.style.animation = "fadeOut 1s";
+	setTimeout(() => {
+		result.style.webkitAnimation = "fadeIn 1s";
+		result.style.animation = "fadeIn 1s";
+		setTimeout(() => {
+			nextQ6.style.display ="none";
+			result.style.display = "block";
+	},450)})	
+}
+ */
+
+
 const list=[
 	{
 		q : '조직이나 단체에서 불평등한 상황이 생길 경우 권리를 요구하기보다는 수용한다.',
