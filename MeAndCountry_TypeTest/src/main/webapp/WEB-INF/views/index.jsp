@@ -12,7 +12,9 @@
 <link rel="stylesheet" href="resources/css/animation.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+<link
+	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
+	rel="stylesheet">
 
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -39,8 +41,7 @@
 		</section>
 
 		<!-- 문제 페이지 -->
-		<form action="${contextPath }/test/firstPage" 
-			method="post">
+		<form action="${contextPath }/test/firstPage" method="post">
 			<section id="main-page">
 				<div class="pageBox">
 					<div>
@@ -48,172 +49,15 @@
 						<h1 class="q-num">Q1</h1>
 						<p class="progress-txt">1/6</p>
 					</div>
-					<div>
-						<p class="q1">
-							조직이나 단체에서 불평등한 상황이 생길 경우<br> 권리를 요구하기보다는 수용한다.
-						</p>
-					</div>
+					<div class="question-box"></div>
 
-					<div>
-						<button type="button" id="answer" value="0" name="answerOne" class="q1-btn">전혀 아니다</button>
-						<br>
-						<button type="button" id="answer" value="1" name="answerOne" class="q1-btn">약간 아니다</button>
-						<br>
-						<button type="button" id="answer" value="2" name="answerOne" class="q1-btn">보통이다</button>
-						<br>
-						<button type="button" id="answer" value="3" name="answerOne" class="q1-btn">약간 그렇다</button>
-						<br>
-						<button type="button" id="answer" value="4" name="answerOne" class="q1-btn">매우 그렇다</button>
-						<!-- 
-						<input type="button" value="전혀 아니다" id="answer" name="answerOne" class="q1-btn">
-						<br>
-						<input type="button" value="약간 아니다" id="answer" name="answerOne" class="q1-btn">
-						<br>
-						<input type="button" value="보통이다" id="answer" name="answerOne" class="q1-btn">
-						<br>
-						<input type="button" value="약간 그렇다" id="answer" name="answerOne" class="q1-btn">
-						<br>
-						<input type="button" value="매우 그렇다" id="answer" name="answerOne" class="q1-btn">
-						 -->
-						<br>
-					</div>
+					<div class="answer-box"></div>
 				</div>
 			</section>
-			<section id="main-page2">
-				<div class="pageBox">
 
-					<div>
-						<!--몇번째 문항인지 숫자로 표현 2번-->
-						<h1 class="q-num">Q2</h1>
-						<p class="progress-txt">2/6</p>
-					</div>
-					<div>
-						<p class="q1">전체의 성과보다 개인의 성과가 더 중요하다.</p>
-					</div>
-
-					<div>
-						<button type="button" value="0" name="answerTwo" class="q2-btn">전혀 아니다</button>
-						<br>
-						<button type="button" value="1" name="answerTwo" class="q2-btn">약간 아니다</button>
-						<br>
-						<button type="button" value="2" name="answerTwo" class="q2-btn">보통이다</button>
-						<br>
-						<button type="button" value="3" name="answerTwo" class="q2-btn">약간 그렇다</button>
-						<br>
-						<button type="button" value="4" name="answerTwo" class="q2-btn">매우 그렇다</button>
-						<br>
-					</div>
-				</div>
-			</section>
-			<section id="main-page3">
-				<div class="pageBox">
-
-					<div>
-						<!--몇번째 문항인지 숫자로 표현 3번-->
-						<h1 class="q-num">Q3</h1>
-						<p class="progress-txt">3/6</p>
-					</div>
-					<div>
-						<p class="q1">
-							소통, 화합보다 경쟁, 성취, 승리가 <br>더 중요하다고 생각한다.
-						</p>
-					</div>
-
-					<div>
-						<input type="button" value="젼혀 아니다" name="answerThree" class="q3-btn">
-						<br>
-						<input type="button" value="약간 아니다" name="answerThree" class="q3-btn">
-						<br>
-						<input type="button" value="보통이다" name="answerThree" class="q3-btn">
-						<br>
-						<input type="button" value="약간 그렇다" name="answerThree" class="q3-btn">
-						<br>
-						<input type="button" value="매우 그렇다" name="answerThree" class="q3-btn">
-						<br>
-					</div>
-				</div>
-			</section>
-			<section id="main-page4">
-				<div class="pageBox">
-
-					<div>
-						<!--몇번째 문항인지 숫자로 표현 4번-->
-						<h1 class="q-num">Q4</h1>
-						<p class="progress-txt">4/6</p>
-					</div>
-					<div>
-						<p class="q1">
-							미래에 대한 불확실하고 모호한 상황보다 <br>예측 가능성과 안정성을 추구한다.
-						</p>
-					</div>
-
-					<div>
-						<button type="button" value="0" name="answerfour" class="q4-btn">전혀 아니다</button>
-						<br>
-						<button type="button" value="1" name="answerThree" class="q4-btn">약간 아니다</button>
-						<br>
-						<button type="button" value="2" name="answerThree" class="q4-btn">보통이다</button>
-						<br>
-						<button type="button" value="3" name="answerThree" class="q4-btn">약간 그렇다</button>
-						<br>
-						<button type="button" value="4" name="answerThree" class="q4-btn">매우 그렇다</button>
-						<br>
-					</div>
-				</div>
-			</section>
-			<section id="main-page5">
-				<div class="pageBox">
-
-					<div>
-						<!--몇번째 문항인지 숫자로 표현 5번-->
-						<h1 class="q-num">Q5</h1>
-						<p class="progress-txt">5/6</p>
-					</div>
-					<div>
-						<p class="q1">단기적인 이익보다는 장기적인 관점에서의 이익을 추구한다.</p>
-					</div>
-
-					<div>
-						<button type="button" value="0" name="answerfive" class="q5-btn">전혀 아니다</button>
-						<br>
-						<button type="button" value="1" name="answerfive" class="q5-btn">약간 아니다</button>
-						<br>
-						<button type="button" value="2" name="answerfive" class="q5-btn">보통이다</button>
-						<br>
-						<button type="button" value="3" name="answerfive" class="q5-btn">약간 그렇다</button>
-						<br>
-						<button type="button" value="4" name="answerfive" class="q5-btn">매우 그렇다</button>
-						<br>
-					</div>
-				</div>
-			</section>
-			<section id="main-page6">
-				<div class="pageBox">
-					<div>
-						<!--몇번째 문항인지 숫자로 표현 6번-->
-						<h1 class="q-num">Q6</h1>
-						<p class="progress-txt">6/6</p>
-					</div>
-					<div>
-						<p class="q1">여가 생활이나 취미 활동에 대한 욕구가 높다.</p>
-					</div>
-					<div>
-						<button type="button" value="0" name="answersix" class="q6-btn">전혀 아니다</button>
-						<br>
-						<button type="button" value="1" name="answersix" class="q6-btn">약간 아니다</button>
-						<br>
-						<button type="button" value="2" name="answersix" class="q6-btn">보통이다</button>
-						<br>
-						<button type="button" value="3" name="answersix" class="q6-btn">약간 그렇다</button>
-						<br>
-						<button type="button" value="4" name="answersix" class="q6-btn">매우 그렇다</button>
-						<br>
-						<div class="result">
-							<input type="submit" value="결과보기" onclick="result()" >
-						</div>
-					</div>
-				</div>
-			</section>
+			<div class="result">
+				<input type="submit" value="결과보기" onclick="result()">
+			</div>
 		</form>
 
 		<!-- 결과 페이지 -->
