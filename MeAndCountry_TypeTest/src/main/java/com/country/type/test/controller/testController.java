@@ -18,7 +18,7 @@ public class testController {
 		return "index";
 	}
 	//선택
-	@PostMapping("test/firstPage")
+	@GetMapping("test/firstPage")
 	public String first(testDTO dto) {
 		ts.selectAnswer(dto);
 		return "redirect:result";

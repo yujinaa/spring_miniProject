@@ -54,5 +54,23 @@ img{
 	border: none;
 	cursor: pointer;
 }
-                       
+#result-page{
+	display: none;
+	text-align: center;
+}
+
+.viewResult{
+	margin:0 auto;
+	height: 200px;
+}    
+input.view-btn{
+	margin-top:300px;
+	height: 100px;
+	width: 400px;
+	font-size: 40px;
+	background-color: black;
+	color: #F8F8FF;
+	border: none;
+	cursor: pointer;
+}            
 

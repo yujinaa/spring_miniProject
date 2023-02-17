@@ -1,4 +1,71 @@
 
+const start = document.querySelector("#start-page")
+const main = document.querySelector("#main-page"); 
+const viewResult = document.querySelector('#result-page');
+const endPoint = 7; 
+const select = [];
+
+function result(){
+	main.style.webkitAnimation = "fadeOut 0.4s";
+	main.style.animation = "fadeOut 0.4s";
+	setTimeout(() => {
+		viewResult.style.webkitAnimation = "fadeIn 0.4s";
+		viewResult.style.animation = "fadeIn 0.4s";
+		setTimeout(() => {
+			main.style.display ="none";
+			viewResult.style.display = "block";
+	},450)})	
+}
+ 
+
+//질문,선택 createElement, innerHTML로 구현
+function qAnswer(answerText, qIndex){
+	var a = document.querySelector('.answer-box');
+	var answer = document.createElement('button'); //answer에 button넣기
+	answer.classList.add('answerList');//answerdml classList에서 클래스값 넣기
+	a.appendChild(answer);
+	answer.innerHTML = answerText;
+	answer.addEventListener("click",function(){
+		var btns = document.querySelectorAll('.answerList'); //버튼 값을 클릭하면 전부 사라지고 다음 문제의 버튼 생성
+		for(let i = 0; i<btns.length;i++){
+			btns[i].disabled = true;
+			btns[i].style.display = 'none';
+		}
+		next(++qIndex);
+		},false);
+}
+	
+function next(qIndex){
+	if(qIndex+1 === endPoint){//테스트 끝나면 결과페이지 호출
+	result();
+	return;
+	}
+	var q = document.querySelector('.question-box');
+	var n = document.querySelector('.q-num');
+	q.innerHTML = list[qIndex].q; //list 첫 번째 요소에 q를 넣는다.
+	n.innerHTML = list[qIndex].n;
+	for(let i in list[qIndex].a){
+		qAnswer(list[qIndex].a[i].answer,qIndex);
+	}
+	var progress = document.querySelector('.progress-bar');
+	progress.style.width = (100/endPoint) * (qIndex+1) +'%';
+}
+//시작하기 버튼 클릭시 문제 출력
+function begin(){	
+	start.style.webkitAnimation = "fadeOut 0.4s";
+	start.style.animation = "fadeOut 0.4s";
+	setTimeout(() => {
+		main.style.webkitAnimation = "fadeIn 0.4s";
+		main.style.animation = "fadeIn 0.4s";
+		setTimeout(() => {
+			start.style.display ="none";
+			main.style.display = "block";
+	},450)
+	let qIndex = 0;
+	next(qIndex);
+},450);	
+}
+
 const list=[
 	{	
 		n : 'Q1',
@@ -67,78 +134,77 @@ const list=[
 			]
 	}
 ]
-
-
-//function next() { //1번
-  // $("#title").html(q[num]["title"]); //2번
-  // $("#type").val(q[num]["type"]); //3번
-  // $("#A").html(q[num]["A"]); //4번
-  // $("#B").html(q[num]["B"]); //5번
-  // num++; //6번
-//}
-
-const start = document.querySelector("#start-page")
-const main = document.querySelector("#main-page"); 
-const endPoint = 6; //총 6문제라 끝값은 6
-const result = document.querySelector("#result");
-const select = [];
-
-//질문,선택 createElement, innerHTML로 구현
-function qAnswer(answerText, qIndex){
-	var a = document.querySelector('.answer-box');
-	var answer = document.createElement('button'); //answer에 button넣기
-	answer.classList.add('answerList');//answerdml classList에서 클래스값 넣기
-	a.appendChild(answer);
-	answer.innerHTML = answerText;
-	answer.addEventListener("click",function(){
-		var btns = document.querySelectorAll('.answerList'); //버튼 값을 클릭하면 전부 사라지고 다음 문제의 버튼 생성
-		for(let i = 0; i<btns.length;i++){
-			btns[i].disabled = true;
-			btns[i].style.display = 'none';
-		}
-		next(++qIndex);
-		},false);
-}
-	
-function next(qIndex){
-	var q = document.querySelector('.question-box');
-	var n = document.querySelector('.q-num');
-	var p = document.querySelector('.progress-txt');
-	q.innerHTML = list[qIndex].q; //list 첫 번째 요소에 q를 넣는다.
-	n.innerHTML = list[qIndex].n;
-	for(let i in list[qIndex].a){
-		qAnswer(list[qIndex].a[i].answer,qIndex);
-	}
-	var progress = document.querySelector('.progress-bar');
-	progress.style.width = (100/endPoint) * (qIndex+1) +'%';
-}
-//시작하기 버튼 클릭시 문제 출력
-function begin(){	
-	start.style.webkitAnimation = "fadeOut 0.4s";
-	start.style.animation = "fadeOut 0.4s";
-	setTimeout(() => {
-		main.style.webkitAnimation = "fadeIn 0.4s";
-		main.style.animation = "fadeIn 0.4s";
-		setTimeout(() => {
-			start.style.display ="none";
-			main.style.display = "block";
-	},450)
-	let qIndex = 0;
-	next(qIndex);
-},450);	
-}
-
-/*
-function result(){
-	nextQ6.style.webkitAnimation = "fadeOut 1s";
-	nextQ6.style.animation = "fadeOut 1s";
-	setTimeout(() => {
-		result.style.webkitAnimation = "fadeIn 1s";
-		result.style.animation = "fadeIn 1s";
-		setTimeout(() => {
-			nextQ6.style.display ="none";
-			result.style.display = "block";
-	},450)})	
-}
- */
-
+const resultList=[
+	{	
+		country : '한국',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '중국',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '일본',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '인도',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '태국',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '영국',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '프랑스',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '이탈리아',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '독일',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '스위스',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '미국',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '캐나다',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '멕시코',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '브라질',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '아르헨티나',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '이집트',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '오스트레일리아',
+		desc : '어쩌구 저쩌구'
+	},
+	{	
+		country : '뉴질랜드',
+		desc : '어쩌구 저쩌구'
+	},
+]

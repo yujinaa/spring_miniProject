@@ -9,6 +9,7 @@
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <link rel="stylesheet" href="resources/css/index.css">
 <link rel="stylesheet" href="resources/css/main.css">
+<link rel="stylesheet" href="resources/css/result.css">
 <link rel="stylesheet" href="resources/css/animation.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,30 +42,43 @@
 		</section>
 
 		<!-- 문제 페이지 -->
-		<form action="${contextPath }/test/firstPage" method="post">
+		<form action="${contextPath }/test/firstPage" method="get">
 			<section id="main-page">
 				<div class="pageBox">
 					<div>
 						<!--몇번째 문항인지 숫자로 표현 1번-->
 						<h1 class="q-num"></h1>
-						<div class="progress"><p class="progress-bar"></p></div>
+						<div class="progress">
+							<p class="progress-bar"></p>
+						</div>
 					</div>
 					<div class="question-box"></div>
 
 					<div class="answer-box"></div>
 				</div>
 			</section>
-
-			<div class="result">
-				<input type="submit" value="결과보기" onclick="result()">
-			</div>
+			<section id="result-page">
+<!-- 
+				<div class="result-h1">
+					<p class="p-h1">나와 맞는 나라는?</p>
+				</div>
+				<div class="resultCountry">aaa</div>
+				<div id="resultImg">zzz
+				
+				</div>
+				<div class="resultDes">zzz
+				
+				</div>
+				<button type="button" class="share-btn">공유하기</button>
+				
+				<a href="${contextPath }/index"><button type="button"
+						class="replay-btn">다시 테스트하기</button></a>
+					 -->
+				<div class="viewResult">
+					<input type="submit" value="결과보기" onclick="totalResult()" class="view-btn">
+				</div>
+			</section>
 		</form>
-
-		<!-- 결과 페이지 -->
-		<section id="result-page">
-			<h1>결과</h1>
-			<h2>결과 설명</h2>
-		</section>
 	</div>
 	<script src="resources/js/test.js"></script>
 </body>
