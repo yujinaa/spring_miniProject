@@ -18,11 +18,11 @@ public class testController {
 		return "index";
 	}
 	//선택
-	@GetMapping("test/firstPage")
-	public String first(testDTO dto) {
-		ts.selectAnswer(dto);
-		return "redirect:result";
-	}
+//	@GetMapping("test/firstPage")
+//	public String first(testDTO dto) {
+//		ts.selectAnswer(dto);
+//		return "test/result";
+//	}
 	//결과페이지
 	@GetMapping("test/result")
 	public String result() {

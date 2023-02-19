@@ -72,5 +72,28 @@ input.view-btn{
 	color: #F8F8FF;
 	border: none;
 	cursor: pointer;
-}            
-
+} 
+.result-h1{
+	height: 60px;
+	margin-top: 10px;
+	
+}
+.p-h1{
+	font-size: 50px;
+	font-weight: bold;
+}
+.resultCountry{
+	font-size: 35px;
+}
+#resultImg{
+	padding: 30px;
+}
+.resultDes{
+	padding: 20px;
+	font-size: 20px;
+}
+.border-line{
+	margin: 0 auto;
+	width: 60%;
+	border:2px solid black;
+}

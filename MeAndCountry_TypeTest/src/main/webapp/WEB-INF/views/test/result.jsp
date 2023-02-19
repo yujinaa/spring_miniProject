@@ -21,13 +21,13 @@
 	<p class="p-h1">나와 맞는 나라는?</p>
 </div>
 <div class="resultCountry">
-aaa
+
 </div>
 <div id="resultImg">
-zzz
+
 </div>
 <div class="resultDes">
-zzz
+
 </div>
 <button type="button" class="share-btn">공유하기</button>
 <a href="${contextPath }/index"><button type="button" class="replay-btn">다시 테스트하기</button></a>

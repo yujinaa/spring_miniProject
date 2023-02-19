@@ -5,10 +5,25 @@ const viewResult = document.querySelector('#result-page');
 const endPoint = 6; 
 const select = [];
 
-function totalResult(){
-	console.log(select);
-	calResult();
+function setResult(){
+	let point = calResult();
+	//나라
+	const countryName = document.querySelector('.resultCountry');
+	countryName.innerHTML = resultList[point].name; //나라 이름에 정보 리스트의 이름을 담는다
+	//이미지
+	var resultImg = document.createElement('img'); //이미지 태그 만들기
+	const imgDiv = document.querySelector('#resultImg');//이미지 태그 선택
+	var imgURL = 'resources/img/image-' + point + '.jpg';
+	resultImg.src = imgURL;
+	resultImg.alt = point;
+	imgDiv.appendChild(resultImg); //이미지 연결하기
+	
+	//설명
+	const des = document.querySelector('.resultDes');
+	des.innerHTML = resultList[point].desc;
 }
+
+
 
 function calResult(){
 	var clickArray = [
@@ -28,7 +43,7 @@ function calResult(){
 		{name:'브라질', value:0, key:13},
 		{name:'아르헨티나', value:0, key:14},
 		{name:'이집트', value:0, key:15},
-		{name:'오스트레일리아', value:0, key:16},
+		{name:'호주', value:0, key:16},
 		{name:'뉴질랜드', value:0, key:17},
 	]
 		for(let i = 0;i<endPoint;i++){
@@ -54,6 +69,10 @@ function calResult(){
 		let resultString = resultArray[0].key;
 		return resultString;
 }
+function totalResult(){
+	//calResult();
+	setResult();
+}
 
 function result(){
 	main.style.webkitAnimation = "fadeOut 0.4s";
@@ -66,7 +85,7 @@ function result(){
 			viewResult.style.display = "block";
 	},450)})	
 	console.log(select);
-	calResult();
+	setResult();
 }
  
 
@@ -97,6 +116,7 @@ function qAnswer(answerText, qIndex,index){
 function next(qIndex){
 	if(qIndex === endPoint){//테스트 끝나면 결과페이지 호출
 	result();
+	//setResult();
 	return;
 	}
 	var q = document.querySelector('.question-box');
@@ -131,7 +151,7 @@ const list=[
 		q : '조직이나 단체에서 불평등한 상황이 생길 경우 <br>권리를 요구하기보다는 수용한다.',
 		a : [
 			{answer:'전혀 아니다' , type:[]},
-			{answer: '약간 아니다',type:['캐나다','뉴질랜드','스위스','독일','영국','미국','오스트레일리아']},
+			{answer: '약간 아니다',type:['캐나다','뉴질랜드','스위스','독일','영국','미국','호주']},
 			{answer: '보통이다', type:['한국','아르헨티나','일본','이탈리아']},
 			{answer: '약간 그렇다',type:['태국','중국','이집트','브라질','인도','프랑스']},
 			{answer: '매우 그렇다',type:['멕시코']},
@@ -145,7 +165,7 @@ const list=[
 			{answer: '약간 아니다',type:['이집트','브라질','멕시코']},
 			{answer: '보통이다', type:['아르헨티나','일본','인도']},
 			{answer: '약간 그렇다',type:['캐나다','뉴질랜드','스위스','독일','이탈리아','프랑스']},
-			{answer: '매우 그렇다',type:['영국','미국','오스트레일리아']},
+			{answer: '매우 그렇다',type:['영국','미국','호주']},
 			]
 	},
 	{
@@ -155,7 +175,7 @@ const list=[
 			{answer:'전혀 아니다' , type:[]},
 			{answer: '약간 아니다',type:['한국','태국']},
 			{answer: '보통이다', type:['캐나다','뉴질랜드','아르헨티나','이집트','브라질','인도','프랑스']},
-			{answer: '약간 그렇다',type:['스위스','독일','영국','미국','오스트레일리아','이탈리아','중국','멕시코']},
+			{answer: '약간 그렇다',type:['스위스','독일','영국','미국','호주','이탈리아','중국','멕시코']},
 			{answer: '매우 그렇다',type:['일본']},
 			]
 	},
@@ -165,7 +185,7 @@ const list=[
 		a : [
 			{answer:'전혀 아니다' , type:[]},
 			{answer: '약간 아니다',type:['영국','중국','인도']},
-			{answer: '보통이다', type:['캐나다','뉴질랜드','스위스','미국','오스트레일리아','이집트']},
+			{answer: '보통이다', type:['캐나다','뉴질랜드','스위스','미국','호주','이집트']},
 			{answer: '약간 그렇다',type:['독일','이탈리아','태국','브라질']},
 			{answer: '매우 그렇다',type:['한국','일본','아르헨티나','프랑스','멕시코']},
 			]
@@ -175,7 +195,7 @@ const list=[
 		q: '단기적인 이익보다는 <br>장기적인 관점에서의 이익을 추구한다.',
 		a : [
 			{answer:'전혀 아니다' , type:['아르헨티나']},
-			{answer: '약간 아니다',type:['캐나다','뉴질랜드','미국','오스트레일리아','태국','멕시코']},
+			{answer: '약간 아니다',type:['캐나다','뉴질랜드','미국','호주','태국','멕시코']},
 			{answer: '보통이다', type:['영국','이집트','브라질','인도']},
 			{answer: '약간 그렇다',type:['스위스','이탈리아','프랑스']},
 			{answer: '매우 그렇다',type:['독일','한국','일본','중국']},
@@ -188,82 +208,82 @@ const list=[
 			{answer:'전혀 아니다' , type:['이집트']},
 			{answer: '약간 아니다',type:['독일','한국','이탈리아','중국','인도']},
 			{answer: '보통이다', type:['일본','태국','브라질','프랑스']},
-			{answer: '약간 그렇다',type:['캐나다','뉴질랜드','스위스','영국','미국','오스트레일리아','아르헨티나']},
+			{answer: '약간 그렇다',type:['캐나다','뉴질랜드','스위스','영국','미국','호주','아르헨티나']},
 			{answer: '매우 그렇다',type:['멕시코']},
 			]
 	}
 ]
 const resultList=[
 	{	
-		country : '한국',
+		name : '한국',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '중국',
+		name : '중국',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '일본',
+		name : '일본',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '인도',
+		name: '인도',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '태국',
+		name: '태국',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '영국',
+		name : '영국',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '프랑스',
+		name : '프랑스',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '이탈리아',
+		name : '이탈리아',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '독일',
+		name : '독일',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '스위스',
+		name : '스위스',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '미국',
+		name : '미국',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '캐나다',
+		name : '캐나다',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '멕시코',
+		name : '멕시코',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '브라질',
+		name : '브라질',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '아르헨티나',
+		name : '아르헨티나',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '이집트',
+		name : '이집트',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '오스트레일리아',
+		name : '호주',
 		desc : '어쩌구 저쩌구'
 	},
 	{	
-		country : '뉴질랜드',
+		name : '뉴질랜드',
 		desc : '어쩌구 저쩌구'
 	},
 ]
