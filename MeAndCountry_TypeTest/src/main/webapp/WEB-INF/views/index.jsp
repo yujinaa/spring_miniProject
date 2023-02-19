@@ -36,7 +36,7 @@
 				<img src="resources/img/world-map.jpg">
 			</div>
 			<div class="count">
-				지금까지 총 ~~명이 참여했어요!<br>
+				지금까지 총 <div class="count-num">0</div>명이 참여했어요!<br>
 			</div>
 			<div class="start-btn">
 				<button type="button" id="startBtn" onclick="js:begin()">시작하기</button>
@@ -79,7 +79,6 @@
 					<input type="button" value="결과보기" onclick="totalResult()" class="view-btn">
 				</div>
 					 -->
-		</section>
 		<!-- 
 		</form>
 		 -->

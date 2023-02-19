@@ -130,6 +130,8 @@ function next(qIndex){
 	progress.style.width = (100/endPoint) * (qIndex+1) +'%';
 }
 //시작하기 버튼 클릭시 문제 출력
+ var count=0;
+
 function begin(){	
 	start.style.webkitAnimation = "fadeOut 0.4s";
 	start.style.animation = "fadeOut 0.4s";
@@ -140,6 +142,10 @@ function begin(){
 			start.style.display ="none";
 			main.style.display = "block";
 	},450)
+	const countPlus = document.querySelector('.count-num');
+            count+=1;
+            countPlus.innerText=count;
+        
 	let qIndex = 0;
 	next(qIndex);
 },450);	
