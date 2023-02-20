@@ -11,17 +11,21 @@
 		<result property="answerFour" column="ans_four" />
 		<result property="answerFive" column="ans_five" />
 		<result property="answerSix" column="ans_six" />
-		<!-- 
-		<result property="country" column="country" />
-		 -->
+		<!-- <result property="country" column="country" /> -->
 		<result property="count" column="count" />
 	</resultMap>
-	
-	<!--테스트하기-->
+
+	<!--테스트하기 -->
 	<insert id="selectAnswer">
 		insert into find_country(
-		num, ans_one, ans_two,ans_three,ans_four,ans_five,ans_six,count)
-		values(find_country_seq.nextval,#{answerOne},#{answerTwo}, #{answerThree},
+		num, ans_one,
+		ans_two,ans_three,ans_four,ans_five,ans_six,count)
+		values(find_country_seq.nextval,#{answerOne},#{answerTwo},
+		#{answerThree},
 		#{answerFour},#{answerFive},#{answerSix},#{count})
 	</insert>
+
+	<update id="count">
+		update find_country set count=count+1 where num=#{num}
+	</update>
 </mapper>

@@ -36,7 +36,7 @@
 				<img src="resources/img/world-map.jpg">
 			</div>
 			<div class="count">
-				지금까지 총 <div class="count-num">0</div>명이 참여했어요!<br>
+				<div class="count-num">지금까지 총 ${count }명이 참여했어요!</div><br>
 			</div>
 			<div class="start-btn">
 				<button type="button" id="startBtn" onclick="js:begin()">시작하기</button>
@@ -69,9 +69,11 @@
 			<div id="resultImg"></div>
 			<div class="resultCountry"></div>
 			<div class="resultDes"></div>
+			<div class="button-part">
 			<button type="button" class="share-btn">공유하기</button>
 			<a href="${contextPath }/index"><button type="button"
 					class="replay-btn">다시 테스트하기</button></a>
+			</div>
 		</div>
 		</section>
 		<!-- 

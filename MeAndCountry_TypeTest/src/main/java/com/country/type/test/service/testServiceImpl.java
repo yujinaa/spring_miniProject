@@ -2,6 +2,7 @@ package com.country.type.test.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 import com.country.type.mybatis.test.testMapper;
 import com.country.type.test.dto.testDTO;
@@ -10,11 +11,21 @@ import com.country.type.test.dto.testDTO;
 public class testServiceImpl implements testService{
 	@Autowired testMapper tMapper;
 
-	public void selectAnswer(testDTO dto) {
+	public void selectAnswer(testDTO dto, int num) {
 		try {
 			tMapper.selectAnswer(dto);
+			count(num);
+
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
+	}
+	private void count(int num) {
+		tMapper.count(num);
+	}
+	@Override
+	public void selectAnswer(testDTO dto) {
+		// TODO Auto-generated method stub
+		
 	}
 }
