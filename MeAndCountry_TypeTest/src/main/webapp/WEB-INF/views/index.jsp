@@ -18,6 +18,13 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
 	rel="stylesheet">
+<script
+	src="https://t1.kakaocdn.net/kakao_js_sdk/${VERSION}/kakao.min.js"
+	integrity="${INTEGRITY_VALUE}" crossorigin="anonymous"></script>
+<script type="text/javascript">
+	Kakao.init('04a1c15e89e8b9d355902843f002048b'); //본인 앱키
+	Kakao.isInitialized();
+</script>
 
 <meta charset="EUC-KR">
 <title>Insert title here</title>
@@ -35,9 +42,12 @@
 			<div class="start-img">
 				<img src="resources/img/world-map.jpg">
 			</div>
+			<!-- 
 			<div class="count">
-				<div class="count-num">지금까지 총 ${count }명이 참여했어요!</div><br>
+				<div class="count-num">지금까지 총 ${count }명이 참여했어요!</div>
 			</div>
+			 -->
+				<br>
 			<div class="start-btn">
 				<button type="button" id="startBtn" onclick="js:begin()">시작하기</button>
 			</div>
@@ -62,19 +72,19 @@
 			</div>
 		</section>
 		<section id="result-page">
-		<div class = "border-line"> 
-			<div class="result-h1">
-				<p class="p-h1">나와 맞는 나라는?</p>
+			<div class="border-line">
+				<div class="result-h1">
+					<p class="p-h1">나와 맞는 나라는?</p>
+				</div>
+				<div id="resultImg"></div>
+				<div class="resultCountry"></div>
+				<div class="resultDes"></div>
+				<div class="button-part">
+					<button type="button" onclick="" class="share-btn">공유하기</button>
+					<a href="${contextPath }/index"><button type="button"
+							class="replay-btn">다시 테스트하기</button></a>
+				</div>
 			</div>
-			<div id="resultImg"></div>
-			<div class="resultCountry"></div>
-			<div class="resultDes"></div>
-			<div class="button-part">
-			<button type="button" class="share-btn">공유하기</button>
-			<a href="${contextPath }/index"><button type="button"
-					class="replay-btn">다시 테스트하기</button></a>
-			</div>
-		</div>
 		</section>
 		<!-- 
 				<div class="viewResult">
@@ -86,5 +96,6 @@
 		 -->
 	</div>
 	<script src="resources/js/test.js"></script>
+	<script src="resources/js/shareTest"></script>
 </body>
 </html>
