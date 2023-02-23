@@ -22,7 +22,7 @@
 	src="https://t1.kakaocdn.net/kakao_js_sdk/${VERSION}/kakao.min.js"
 	integrity="${INTEGRITY_VALUE}" crossorigin="anonymous"></script>
 <script type="text/javascript">
-	Kakao.init('04a1c15e89e8b9d355902843f002048b'); //본인 앱키
+	Kakao.init(''); //본인 앱키
 	Kakao.isInitialized();
 </script>
 
@@ -42,12 +42,7 @@
 			<div class="start-img">
 				<img src="resources/img/world-map.jpg">
 			</div>
-			<!-- 
-			<div class="count">
-				<div class="count-num">지금까지 총 ${count }명이 참여했어요!</div>
-			</div>
-			 -->
-				<br>
+			<br>
 			<div class="start-btn">
 				<button type="button" id="startBtn" onclick="js:begin()">시작하기</button>
 			</div>
@@ -86,14 +81,7 @@
 				</div>
 			</div>
 		</section>
-		<!-- 
-				<div class="viewResult">
-					<input type="button" value="결과보기" onclick="totalResult()" class="view-btn">
-				</div>
-					 -->
-		<!-- 
-		</form>
-		 -->
+		
 	</div>
 	<script src="resources/js/test.js"></script>
 	<script src="resources/js/shareTest"></script>
