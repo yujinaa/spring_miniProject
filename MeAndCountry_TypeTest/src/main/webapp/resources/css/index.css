@@ -145,3 +145,7 @@ input.view-btn{
 	margin-top: 3px;
 	transition:background 0.3s ease-in-out;
 }
+
+#shareResult-page{
+	text-align: center;
+}

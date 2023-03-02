@@ -11,5 +11,9 @@ public class testController {
 	public String index() {
 		return "index";
 	}
+	@GetMapping("result0")
+	public String result0() {
+		return "resultPages/result0";
+	}
 
 }
