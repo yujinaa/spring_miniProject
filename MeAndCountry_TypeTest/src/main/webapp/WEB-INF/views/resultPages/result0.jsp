@@ -41,7 +41,6 @@
 			<div class="resultCountry">
 				<p>한국</p>
 			</div>
-
 			<div class="resultDes">
 				<p>
 					약간 위계적인 사회로 어느 정도 계층적 질서를 수용하는 문화입니다.집단주의 사회로 분류되기 때문에 구성원에 대한 긴밀하고
@@ -54,11 +53,14 @@
 					제한된다는 인식을 가지고 있으며 다소 냉소적이며 비관주의 경향이 있습니다.
 				</p>
 			</div>
+			<script type="text/javascript">
+				function goTest() {
+					location.href = "${contextPath }/index";
+				}
+			</script>
 			<div class="button-part">
-				<button type="button" onclick="js:kakaoTalkShare()"
-					class="share-btn">공유하기</button>
-				<a href="${contextPath }/index"><button type="button"
-						class="replay-btn">다시 테스트하기</button></a>
+				<button type="button" onclick="js:goTest()"
+					class="goTest-btn">테스트 하러가기</button>
 			</div>
 		</div>
 	</section>
