@@ -7,15 +7,16 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="widdth=device-width, initial-scale=1">
-<meta name="author" content="Gini">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Ujina">
 <meta name="keywords" content="내 성향과 맞는 나라 찾기">
 <meta name="description" content="간단한 테스트로 알아보는 성향과 맞는 나라 찾기">
 <!-- sns 공유하기 부분 -->
-<meta property = "og:title" content="내 성향과 맞는 나라 찾기"/>
-<meta property = "og:type" content="website"/>
-<meta property = "og:image" content="resources/img/map.png"/>
-<meta property = "og:description" content="간단한 테스트로 알아보는 성향과 맞는 나라 찾기"/>
+<meta property="og:url" content="https://findcountrytest.netlify.app" />
+<meta property="og:title" content="내 성향과 맞는 나라 찾기" />
+<meta property="og:type" content="website" />
+<meta property="og:image" content="resources/img/map.png" />
+<meta property="og:description" content="간단한 테스트로 알아보는 성향과 맞는 나라 찾기" />
 
 <!-- 
 <link rel = "icon" href="resources/img/worldwide.png">
@@ -30,9 +31,8 @@
 <link
 	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
 	rel="stylesheet">
-<script
-	src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.story.min.js"
-	integrity=""
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.min.js"
+	integrity="sha384-dpu02ieKC6NUeKFoGMOKz6102CLEWi9+5RQjWSV0ikYSFFd8M3Wp2reIcquJOemx"
 	crossorigin="anonymous"></script>
 <script type="text/javascript">
 	Kakao.init(''); //앱키
@@ -85,7 +85,8 @@
 				<div class="resultCountry"></div>
 				<div class="resultDes"></div>
 				<div class="button-part">
-					<button type="button" onclick="js:kakaoTalkShare()" class="share-btn">공유하기</button>
+					<button type="button" onclick="js:kakaoTalkShare()"
+						class="share-btn">공유하기</button>
 					<a href="${contextPath }/index"><button type="button"
 							class="replay-btn">다시 테스트하기</button></a>
 				</div>
