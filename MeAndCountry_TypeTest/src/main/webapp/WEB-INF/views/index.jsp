@@ -6,12 +6,24 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="widdth=device-width, initial-scale=1">
+<meta name="author" content="Gini">
+<meta name="keywords" content="내 성향과 맞는 나라 찾기">
+<meta name="description" content="간단한 테스트로 알아보는 성향과 맞는 나라 찾기">
+<!-- sns 공유하기 부분 -->
+<meta property = "og:title" content="내 성향과 맞는 나라 찾기"/>
+<meta property = "og:type" content="website"/>
+<meta property = "og:image" content="resources/img/map.png"/>
+<meta property = "og:description" content="간단한 테스트로 알아보는 성향과 맞는 나라 찾기"/>
+
+<!-- 
+<link rel = "icon" href="resources/img/worldwide.png">
+<a href="https://www.flaticon.com/kr/free-icons/" title="지구 아이콘">지구 아이콘  제작자: Flat Icons - Flaticon</a>
+ -->
 <script src="http://code.jquery.com/jquery-latest.min.js"></script>
 <link rel="stylesheet" href="resources/css/index.css">
 <link rel="stylesheet" href="resources/css/main.css">
-<!-- 
- <link rel="stylesheet" href="resources/css/result.css">
- -->
 <link rel="stylesheet" href="resources/css/animation.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,15 +31,17 @@
 	href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap"
 	rel="stylesheet">
 <script
-	src="https://t1.kakaocdn.net/kakao_js_sdk/${VERSION}/kakao.min.js"
-	integrity="${INTEGRITY_VALUE}" crossorigin="anonymous"></script>
+	src="https://t1.kakaocdn.net/kakao_js_sdk/2.1.0/kakao.story.min.js"
+	integrity=""
+	crossorigin="anonymous"></script>
 <script type="text/javascript">
-	Kakao.init(''); //본인 앱키
+	Kakao.init(''); //앱키
 	Kakao.isInitialized();
+	console.log(Kakao.isInitialized());
 </script>
 
 <meta charset="EUC-KR">
-<title>Insert title here</title>
+<title>내 성향과 맞는 나라 찾기</title>
 </head>
 <body>
 	<div class="container">
@@ -48,10 +62,6 @@
 			</div>
 		</section>
 
-		<!-- 문제 페이지 -->
-		<!-- 
-		 <form action="${contextPath }/test/firstPage" method="get">
-		 -->
 		<section id="main-page">
 			<div class="pageBox">
 				<div>
@@ -75,15 +85,15 @@
 				<div class="resultCountry"></div>
 				<div class="resultDes"></div>
 				<div class="button-part">
-					<button type="button" onclick="" class="share-btn">공유하기</button>
+					<button type="button" onclick="js:kakaoTalkShare()" class="share-btn">공유하기</button>
 					<a href="${contextPath }/index"><button type="button"
 							class="replay-btn">다시 테스트하기</button></a>
 				</div>
 			</div>
 		</section>
-		
+
 	</div>
 	<script src="resources/js/test.js"></script>
-	<script src="resources/js/shareTest"></script>
+	<script src="resources/js/shareTest.js"></script>
 </body>
 </html>

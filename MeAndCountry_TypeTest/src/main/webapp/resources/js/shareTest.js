@@ -10,8 +10,8 @@ Kakao.API.request({
     template_object: {
       object_type: 'feed',
       content: {
-        title: '딸기 치즈 케익',
-        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
+        title: '내 성향과 맞는 나라 찾기',
+        description: '#테스트 #심리테스트 #성향테스트 #mbti',
         image_url:
           'https://mud-kage.kakao.com/dn/Q2iNx/btqgeRgV54P/VLdBs9cvyn8BJXB3o7N8UK/kakaolink40_original.png',
         link: {
