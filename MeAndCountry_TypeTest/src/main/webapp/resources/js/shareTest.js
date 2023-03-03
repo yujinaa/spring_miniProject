@@ -1,27 +1,58 @@
 /**
 카카오톡 공유하기
  */
-
-function kakaoTalkShare(){
+const url = 'http://localhost:8083/type/index';
+function setShare(){
+	var resultImg= document.querySelector('#resultImg');
+	var resultAlt = resultImg.firstElementChild.alt;
+	const shareTitle = '내 성향과 맞는 나차 찾기 결과';	
+	const shareDesc = resultList[resultAlt].name;
+	const shareImage = url + 'img/image-' + resultAlt + '.png';
+	const shareURL = url + 'resultPage.result' + resultAlt + '.jsp';
 	
+		
 Kakao.Share.sendDefault({
   objectType: 'feed',
   content: {
-    title: '내 성형과 맞는 나라 찾기 결과',
-    description: '아메리카노, 빵, 케익',
-    imageUrl:
-      'https://mud-kage.kakao.com/dn/NTmhS/btqfEUdFAUf/FjKzkZsnoeE4o19klTOVI1/openlink_640x640s.jpg',
+    title: shareTitle,
+    description: shareDesc,
+    imageUrl:shareImage,
     link: {
-	  mobileWebUrl: '',
-      webUrl: 'https://developers.kakao.com',
+	  mobileWebUrl: shareURL,
+      webUrl: shareURL
     },
   },
   buttons: [
     {
       title: '결과 확인하기',
       link: {
-        mobileWebUrl: 'https://developers.kakao.com',
-        webUrl: 'https://developers.kakao.com',
+        mobileWebUrl: shareURL,
+        webUrl: shareURL
+      },
+    },
+  ],
+});
+}
+
+
+function kakaoTalkShare(){	
+Kakao.Share.sendDefault({
+  objectType: 'feed',
+  content: {
+    title: shareTitle,
+    description: shareDesc,
+    imageUrl:shareImage,
+    link: {
+	  mobileWebUrl: shareURL,
+      webUrl: shareURL
+    },
+  },
+  buttons: [
+    {
+      title: '결과 확인하기',
+      link: {
+        mobileWebUrl: shareURL,
+        webUrl: shareURL
       },
     },
   ],

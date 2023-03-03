@@ -85,7 +85,7 @@
 				<div class="resultCountry"></div>
 				<div class="resultDes"></div>
 				<div class="button-part">
-					<button type="button" onclick="js:kakaoTalkShare()"
+					<button type="button" onclick="js:setShare()"
 						class="share-btn">공유하기</button>
 					<a href="${contextPath }/index"><button type="button"
 							class="replay-btn">다시 테스트하기</button></a>
