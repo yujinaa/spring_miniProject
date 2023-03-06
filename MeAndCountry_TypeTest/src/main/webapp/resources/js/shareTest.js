@@ -5,10 +5,10 @@ const url = 'http://localhost:8083/type/index';
 function setShare(){
 	var resultImg= document.querySelector('#resultImg');
 	var resultAlt = resultImg.firstElementChild.alt;
-	const shareTitle = '내 성향과 맞는 나차 찾기 결과';	
+	const shareTitle = '내 성향과 맞는 나라 찾기 결과';	
 	const shareDesc = resultList[resultAlt].name;
-	const shareImage = url + 'img/image-' + resultAlt + '.png';
-	const shareURL = url + 'resultPage.result' + resultAlt + '.jsp';
+	const shareImage = '${contextPath }/resources/img/image-'+ resultAlt+'.jpg';
+	const shareURL = 'http://localhost:8083/type/resultPages/result' + resultAlt + '.jsp';
 	
 		
 Kakao.Share.sendDefault({
@@ -43,7 +43,6 @@ Kakao.Share.sendDefault({
     description: shareDesc,
     imageUrl:shareImage,
     link: {
-	  mobileWebUrl: shareURL,
       webUrl: shareURL
     },
   },
@@ -51,7 +50,6 @@ Kakao.Share.sendDefault({
     {
       title: '결과 확인하기',
       link: {
-        mobileWebUrl: shareURL,
         webUrl: shareURL
       },
     },

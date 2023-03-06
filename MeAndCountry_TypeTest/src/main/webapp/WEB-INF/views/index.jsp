@@ -12,10 +12,10 @@
 <meta name="keywords" content="내 성향과 맞는 나라 찾기">
 <meta name="description" content="간단한 테스트로 알아보는 성향과 맞는 나라 찾기">
 <!-- sns 공유하기 부분 -->
-<meta property="og:url" content="https://findcountrytest.netlify.app" />
+<meta property="og:url" content="http://localhost:8083/type/index" />
 <meta property="og:title" content="내 성향과 맞는 나라 찾기" />
 <meta property="og:type" content="website" />
-<meta property="og:image" content="resources/img/map.png" />
+<meta property="og:image" content="resources/img/worldwide.png" />
 <meta property="og:description" content="간단한 테스트로 알아보는 성향과 맞는 나라 찾기" />
 
 <!-- 
